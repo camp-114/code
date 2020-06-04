@@ -1,0 +1,81 @@
+<!-- 15_form_checkbox.html -->
+<html>
+
+<body>
+
+    <form action="http://part04.test/16_form.php" method="Post">
+        username : <input type="text" name="user" value="ipiupin"><br>
+        password : <input type="password" name="pass"><br>
+        nama lengkap : <input type="text" name="nama" value="Ipin Upin Brother"><br>
+        alamat : <textarea rows="3" cols="60" name="alamat"></textarea><br>
+        <!-- radio -->
+        <fieldset>
+            <legend>Jenis Kelamin</legend>
+            Pria<input type="radio" name="Gender" id="pria" value="pria">&nbsp;
+            Wanita<input type="radio" name="Gender" id="wanita" value="wanita">&nbsp;
+            Tidak Menjawab <input type="radio" name="Gender" id="null" value="Tidak Mengatakan" checked="cheked">
+        </fieldset>
+        <!-- datalist -->
+        <label for="listkota">Tempat Tinggal:</label>
+        <input type="text" id="Listkota" name="kota" list="namakota" />
+        <datalist id="namakota">
+            <option value="Bandung">
+            <option value="Jakarta">
+            <option value="Surabaya">
+            <option value="Semarang">
+        </datalist>
+        <br>
+        <br>
+        <!-- checkbox single -->
+        diatas 18 tahun ?
+        <input type="checkbox" name="umur" value="yes" />
+        <br>
+        <!-- checkbox multi-->
+        <br>
+        <fieldset>
+            <legend>hobby kamu ?</legend>
+            <input type="checkbox" name="hobby[]" value="olah raga" />olah raga<br>
+            <input type="checkbox" name="hobby[]" value="membaca" />membaca<br>
+            <input type="checkbox" name="hobby[]" value="tidur" />tidur<br>
+            <input type="checkbox" name="hobby[]" value="jalan jalan" />jalan jalan<br>
+        </fieldset>
+        <br>
+
+        <!-- select -->
+        <p>Addons:
+            <select name="kursus" required>
+                <option value="">Please select...</option>
+                <option value="None">kelas standar</option>
+                <optgroup label="Kelas Tambahan">
+                    <option value="management IT">management IT</option>
+                    <option value="Analisa Sistem">Analisa Sistem</option>
+                </optgroup>
+            </select>
+        </p>
+        <br>
+        <!-- multiple Select -->
+        <label for="bahasa">Bahasa Pemograman</label>
+        <select name="bahasa[]" multiple size="3">
+            <option label="HTML" value="HTML">
+            <option label="CSS" value="CSS">
+            <option label="PHP" value="PHP">
+            <option label="Java" value="Java">
+            <option label="Python" value="Pythone">
+        </select>
+
+        <br>
+        <!-- slide -->
+        <p>berapa lama target anda menyelsaikan kursus ? (minggu) </p>
+        <input type="range" name="lama" min="3" max="13" step="2" />
+
+        <br>
+        <!-- date time -->
+        <p> Tanggal Mulai </p>
+        <input type="date" name="Date" min="2019-08-06" max="2022-08-11" placeholder="mm/dd/yy" />
+
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>

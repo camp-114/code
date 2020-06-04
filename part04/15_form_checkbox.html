@@ -1,0 +1,48 @@
+<!-- 15_form_checkbox.html -->
+<html>
+
+<body>
+
+    <form action="http://part04.test/15_form.php" method="Post">
+        username : <input type="text" name="user" value="ipiupin"><br>
+        password : <input type="password" name="pass"><br>
+        nama lengkap : <input type="text" name="nama" value="Ipin Upin Brother"><br>
+        alamat : <textarea rows="3" cols="60" name="alamat"></textarea><br>
+        <!-- radio -->
+        <fieldset>
+            <legend>Jenis Kelamin</legend>
+            Pria<input type="radio" name="Gender" id="pria" value="pria">&nbsp;
+            Wanita<input type="radio" name="Gender" id="wanita" value="wanita">&nbsp;
+            Tidak Menjawab <input type="radio" name="Gender" id="null" value="Tidak Mengatakan" checked="cheked">
+        </fieldset>
+        <!-- datalist -->
+        <label for="listkota">Tempat Tinggal:</label>
+        <input type="text" id="Listkota" name="kota" list="namakota" />
+        <datalist id="namakota">
+            <option value="Bandung">
+            <option value="Jakarta">
+            <option value="Surabaya">
+            <option value="Semarang">
+        </datalist>
+        <br>
+        <br>
+        <!-- checkbox single -->
+        diatas 18 tahun ?
+        <input type="checkbox" name="umur" value="yes" />
+        <br>
+        <!-- checkbox multi-->
+        <br>
+        <fieldset>
+            <legend>hobby kamu ?</legend>
+            <input type="checkbox" name="hobby[]" value="olah raga" />olah raga<br>
+            <input type="checkbox" name="hobby[]" value="membaca" />membaca<br>
+            <input type="checkbox" name="hobby[]" value="tidur" />tidur<br>
+            <input type="checkbox" name="hobby[]" value="jalan jalan" />jalan jalan<br>
+        </fieldset>
+        <br>
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!-- 14_form_list.html -->
+<html>
+
+<body>
+
+    <form action="http://part04.test/14_form.php" method="POST">
+        username : <input type="text" name="user" value="ipiupin"><br>
+        password : <input type="password" name="pass"><br>
+        nama lengkap : <input type="text" name="nama" value="Ipin Upin Brother"><br>
+        alamat : <textarea rows="3" cols="60" name="alamat"></textarea><br>
+        <fieldset>
+            <legend>Jenis Kelamin</legend>
+            Pria<input type="radio" name="Gender" id="pria" value="pria">&nbsp;
+            Wanita<input type="radio" name="Gender" id="wanita" value="wanita">&nbsp;
+            Tidak Menjawab <input type="radio" name="Gender" id="null" value="Tidak Mengatakan" checked="cheked">
+        </fieldset>
+        <label for="listkota">Tempat Tinggal:</label>
+        <input type="text" id="Listkota" name="kota" list="namakota" />
+        <datalist id="namakota">
+            <option value="Bandung" />
+            <option value="Jakarta" />
+            <option value="Surabaya" />
+            <option value="Semarang" />
+        </datalist>
+
+        <br>
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>
